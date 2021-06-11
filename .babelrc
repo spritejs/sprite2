@@ -2,6 +2,7 @@
   "presets": [
     ["@babel/preset-env",
       {
+        "modules": false,
         "targets": {
           "browsers": [
             "> 1%",
@@ -26,5 +27,18 @@
         "useESModules": false
       }
     ]
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["@babel/preset-env",
+          {
+            "targets": {
+              "node": true
+            }
+          }
+        ]
+      ]
+    }
+  }
 }

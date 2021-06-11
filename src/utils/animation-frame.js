@@ -12,8 +12,8 @@ let requestAnimationFrame, // eslint-disable-line import/no-mutable-exports
   cancelAnimationFrame;
 
 if(typeof global !== 'undefined' && typeof global.requestAnimationFrame === 'function') {
-  requestAnimationFrame = global.requestAnimationFrame;
-  cancelAnimationFrame = global.cancelAnimationFrame;
+  requestAnimationFrame = global.requestAnimationFrame.bind(global);
+  cancelAnimationFrame = global.cancelAnimationFrame.bind(global);
 } else {
   requestAnimationFrame = function (fn) {
     return setTimeout(() => {
