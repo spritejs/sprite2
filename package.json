@@ -4,7 +4,7 @@
   "description": "A cross platform high-performance graphics system.",
   "main": "dist/spritejs.js",
   "typings": "typings/spritejs.d.ts",
-  "module": "lib/index.js",
+  "module": "dist/spritejs.esm.js",
   "scripts": {
     "test": "jest --coverage",
     "test:build": "jest --updateSnapshot --coverage",
